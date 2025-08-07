@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Play Riddle Game</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Play Riddle Game</h1>
+
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+            <ul class="flash-messages">
+                {% for category, message in messages %}
+                    <li class="flash-{{ category }}">{{ message }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
+
+        <form action="{{ url_for('play') }}" method="post">
+            <p>{{ question }}</p>
+            <p><strong>Hint:</strong> {{ hint }}</p>
+            <input type="hidden" name="level" value="{{ level }}">
+            <input type="hidden" name="puzzle_index" value="{{ puzzle_index }}">
+            <input type="text" name="action" placeholder="Enter your answer">
+            <input type="submit" value="Submit">
+        </form>
+
+        {% if show_level_change %}
+            <form action="{{ url_for('switch_level') }}" method="post">
+                <input type="hidden" name="current_level" value="{{ level }}">
+                <input type="hidden" name="puzzle_index" value="{{ puzzle_index }}">
+                {% if level != 'easy' %}
+                    <button type="submit" name="new_level" value="easy">Switch to Easy</button>
+                {% endif %}
+                {% if level == 'hard' %}
+                    <button type="submit" name="new_level" value="medium">Switch to Medium</button>
+                {% endif %}
+                <button type="submit" name="new_level" value="">Continue Current Level</button>
+            </form>
+        {% endif %}
+
+        <a href="{{ url_for('index') }}">Back to Home</a>
+    </div>
+</body>
+</html>

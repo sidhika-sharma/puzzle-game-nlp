@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Level</title>
+</head>
+<body>
+    <h1>Select Difficulty Level</h1>
+    <form action="{{ url_for('start') }}" method="post">
+        <button type="submit" name="level" value="easy">Easy</button>
+        <button type="submit" name="level" value="medium">Medium</button>
+        <button type="submit" name="level" value="hard">Hard</button>
+    </form>
+</body>
+</html>

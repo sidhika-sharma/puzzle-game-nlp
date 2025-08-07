@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frustration Options</title>
+</head>
+<body>
+    <h2>It seems you're frustrated. Would you like to switch to an easier level or continue?</h2>
+    <form action="{{ url_for('handle_frustration_choice') }}" method="POST">
+        <input type="hidden" name="level" value="{{ level }}">
+        <input type="hidden" name="puzzle_index" value="{{ puzzle_index }}">
+        <button type="submit" name="choice" value="easy">Switch to Easy Level</button>
+        <button type="submit" name="choice" value="medium">Switch to Medium Level</button>
+        <button type="submit" name="choice" value="continue">Continue Current Level</button>
+    </form>
+</body>
+</html>

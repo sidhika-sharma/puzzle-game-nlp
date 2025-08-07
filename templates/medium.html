@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medium Level</title>
+</head>
+<body>
+    <h1>{{ puzzle['question'] }}</h1>
+    <ul>
+        {% for action in puzzle['actions'] %}
+            <li>{{ action }}</li>
+        {% endfor %}
+    </ul>
+    <form action="/submit_answer" method="post">
+        <input type="hidden" name="puzzle_index" value="{{ puzzle_index }}">
+        <input type="text" name="answer" placeholder="Enter your answer">
+        <button type="submit">Submit</button>
+    </form>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if show_hint %}
+        <p>{{ puzzle['hint'] }}</p>
+    {% endif %}
+    <form action="/play_again" method="post">
+        <button type="submit">Play Again</button>
+    </form>
+</body>
+</html>
