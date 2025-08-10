@@ -1,5 +1,6 @@
 # puzzle-game-nlp
 A fun NLP-based puzzle game using Flask
+
 🧩 Puzzle Game – NLP Edition:
 A fun and interactive word puzzle game built in Python, enhanced with Natural Language Processing (NLP) techniques to validate and analyze words.
 This project uses the NLTK library to ensure correct spelling and meaningful gameplay.
@@ -16,9 +17,7 @@ This project uses the NLTK library to ensure correct spelling and meaningful gam
 📊 Score Tracking – Keeps track of the player’s performance
 
 📂 Project Structure:
-bash
-Copy
-Edit
+
 puzzle-game-nlp/
 │── game.py               # Main game logic
 │── utils.py              # Helper functions
