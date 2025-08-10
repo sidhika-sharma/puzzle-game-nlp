@@ -20,26 +20,42 @@ This project uses the NLTK library to ensure correct spelling and meaningful gam
 
 puzzle-game-nlp/
 │── game.py               # Main game logic
+
 │── utils.py              # Helper functions
+
 │── README.md             # Project documentation
+
 │── requirements.txt      # Python dependencies
+
 └── __pycache__/          # Python cache files
 
 🛠️ Installation & Setup
+
 1️⃣ Clone the Repository
+
 git clone https://github.com/sidhika-sharma/puzzle-game-nlp.git
 cd puzzle-game-nlp
+
 2️⃣ Install Dependencies
+
 Make sure Python is installed (>=3.8).
+
 pip install -r requirements.txt
+
 3️⃣ Run the Game
+
 python game.py
 
 📦 Dependencies
+
 Python 3.8+
+
 NLTK (Natural Language Toolkit)
+
 Random (Python built-in)
+
 Install NLTK if not already installed:
+
 pip install nltk
 
 🧪 How It Works
