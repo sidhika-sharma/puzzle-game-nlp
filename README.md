@@ -59,8 +59,13 @@ Install NLTK if not already installed:
 pip install nltk
 
 🧪 How It Works
+
 1.The game presents a scrambled set of letters
+
 2.The player tries to form valid words
+
 3.Words are validated using NLTK's word corpus
+
 4.Points are awarded for correct entries
+
 5.The player can replay or quit anytime
